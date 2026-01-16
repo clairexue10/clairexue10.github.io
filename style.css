@@ -37,10 +37,6 @@ a:hover {
 /* Navigation */
 .nav {
   border-bottom: 1px solid var(--border);
-}
-
-.nav,
-.nav-inner {
   max-width: 1200px;
   margin: 0 auto;
   padding: 28px 48px;
@@ -49,13 +45,10 @@ a:hover {
   font-size: 15px;
 }
 
-/* If nav-inner exists, reset padding on .nav */
 .nav-inner {
-  padding: 28px 48px;
-}
-
-.nav:has(.nav-inner) {
-  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav-left,
@@ -189,9 +182,13 @@ a:hover {
 }
 
 @media (max-width: 640px) {
-  .nav,
-  .nav-inner {
+  .nav {
     padding: 24px 24px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .nav-inner {
     flex-direction: column;
     gap: 20px;
   }
