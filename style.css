@@ -167,3 +167,76 @@ a {
   color: #666;
   line-height: 1.5;
 }
+
+/* ---------- Project detail template ---------- */
+
+.project-hero {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .project-hero {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+.project-title {
+  font-size: 44px;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  margin: 0 0 14px;
+}
+
+.project-authors {
+  color: #555;
+  font-size: 14px;
+  margin: 0 0 18px;
+}
+
+.project-desc {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.75;
+  margin: 0 0 22px;
+  max-width: 70ch;
+}
+
+.project-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: rgba(0,0,0,0.03);
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.pill-btn:hover {
+  background: rgba(0,0,0,0.06);
+}
+
+.project-figure {
+  display: grid;
+  place-items: center;
+}
+
+.project-figure img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 14px;
+  display: block;
+}
