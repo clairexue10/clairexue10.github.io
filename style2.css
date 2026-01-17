@@ -359,15 +359,8 @@ a:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.hero-image {
-  display: block;
-  width: 100%;
-}
-
 .hero-image img {
   width: 100%;
-  height: auto;
-  display: block;
   border-radius: 12px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
 }
