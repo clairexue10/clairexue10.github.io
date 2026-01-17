@@ -493,3 +493,41 @@ a:hover {
     font-size: 16px;
   }
 }
+
+/* --- Single Column Project Layout --- */
+
+/* Override two-column layout when single-column class is present */
+.project-hero.single-column {
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.project-hero.single-column > div:first-child {
+  padding-right: 0;
+  order: 2;
+}
+
+.project-hero.single-column .project-figure {
+  order: 1;
+  position: relative;
+  top: 0;
+  margin-bottom: 48px;
+}
+
+.project-hero.single-column .project-title {
+  margin-top: 0;
+}
+
+.project-hero.single-column .project-desc {
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  .project-hero.single-column .project-figure {
+    margin-bottom: 32px;
+  }
+}
+
+
