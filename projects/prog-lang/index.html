@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MiniJave – Claire Xue</title>
+  <title>MiniJava: Compilation and Interpretation – Claire Xue</title>
   <link rel="stylesheet" href="/style.css" />
 </head>
 
@@ -28,18 +28,38 @@
     <section class="project-hero single-column">
 
       <div>
-        <h1 class="project-title">MiniJava</h1>
+        <h1 class="project-title">MiniJava: Compilation and Interpretation</h1>
 
         <p class="project-authors">
           CS 251 Principles of Programming Languages · 2025
         </p>
 
+        <div class="project-figure">
+            <img src="./cover-image.jpg" alt="Ethics of tech image">
+        </div>
+
         <p class="project-desc">
-          (description)
+           The following is a brief description of the final project for CS 251 Principles of Programming Languages that I took in fall 2025. I promise I will write more about my reflections for the course here, when I have time.
         </p>
 
         <p class="project-desc">
-            (description)
+            Before I get to write about my reflection, let's dive right into the final project: MiniJava:
+         </p>
+
+        <p class="project-desc">
+            The project explores the design of object-oriented language semantics by implementing a compact yet expressive subset of Java in OCaml. MiniJava loosely follows the structure of real Java and the JVM: programs are first compiled into a typed abstract syntax tree, and then evaluated by an interpreter operating on that compiled representation. By separating compilation from interpretation, the system mirrors how real runtimes enforce correctness through static analysis before any code is executed.
+        </p>
+
+        <p class="project-desc">
+            The first phase focuses on <strong>static type checking and compilation</strong>. Source programs are parsed into a high-level AST and compiled into a lower-level representation only if they satisfy MiniJava’s typing rules. This includes validating class hierarchies, enforcing subtype relationships, checking method overriding constraints (including covariant return types), and ensuring expressions are used consistently with their expected types. The compiler detects errors such as undefined classes or fields, illegal uses of this, and type mismatches—ensuring that well-typed programs cannot encounter most runtime failures.
+        </p>
+
+        <p class="project-desc">
+            The second phase implements the <strong>interpreter</strong>, which evaluates compiled programs according to Java-style object semantics. Objects are instantiated with default field values, fields are resolved using static types, and method calls are dispatched dynamically based on the runtime class of the receiver. The interpreter maintains environments for variable bindings and object instances, supports inheritance and polymorphism, and precisely models the distinction between static and dynamic typing that underlies Java’s behavior.
+        </p>
+
+        <p class="project-desc">
+        Due to course policy, the full implementation code for this project cannot be shared publicly. However, this write-up is intended to document the design decisions, system structure, and conceptual understanding developed throughout the project. I’m always happy to discuss the allocator’s architecture, tradeoffs, and lessons learned in more detail in an academic or interview setting.
         </p>
       </div>
     </section>
