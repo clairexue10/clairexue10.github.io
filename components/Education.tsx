@@ -17,12 +17,13 @@ export default function Education() {
 
         <div className="flex flex-col md:flex-row gap-12">
           <div className="md:w-48 shrink-0">
-            <p className="text-sm text-slate-500 dark:text-slate-400 font-sans">Class of 2026</p>
+            <p className="text-sm text-slate-500 dark:text-slate-400 font-sans">Class of 2027</p>
           </div>
 
           <div className="flex-1">
             <h3 className="font-display text-2xl text-slate-900 dark:text-slate-100">Wellesley College</h3>
-            <p className="text-slate-600 dark:text-slate-400 font-sans mt-1 mb-8">B.A. Computer Science</p>
+            <p className="text-slate-500 dark:text-slate-400 font-sans text-sm mt-0.5">Cross-registered at Massachusetts Institute of Technology</p>
+            <p className="text-slate-600 dark:text-slate-400 font-sans mt-2 mb-8">B.A. Computer Science · Candidate for Honors (thesis)</p>
 
             <p className="text-xs text-slate-400 dark:text-slate-500 font-sans uppercase tracking-widest mb-4">
               Notable Coursework
