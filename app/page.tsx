@@ -20,8 +20,8 @@ export default function Home() {
         <Blog />
         <Contact />
       </main>
-      <footer className="border-t border-slate-200 py-8">
-        <div className="max-w-5xl mx-auto px-6 text-center text-sm text-slate-400 font-sans">
+      <footer className="border-t border-slate-200 dark:border-slate-800 py-8">
+        <div className="max-w-5xl mx-auto px-6 text-center text-sm text-slate-400 dark:text-slate-500 font-sans">
           © {new Date().getFullYear()} Yuhe (Claire) Xue
         </div>
       </footer>

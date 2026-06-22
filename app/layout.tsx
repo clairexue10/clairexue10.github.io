@@ -26,7 +26,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${crimsonPro.variable} ${inter.variable}`}>
+    <html lang="en" className={`${crimsonPro.variable} ${inter.variable}`} suppressHydrationWarning>
+      <head>
+        {/* Prevent flash of wrong theme on load */}
+        <script dangerouslySetInnerHTML={{ __html: `(function(){var s=localStorage.getItem('theme'),p=window.matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(s===null&&p))document.documentElement.classList.add('dark');})();` }} />
+      </head>
       <body>{children}</body>
     </html>
   )

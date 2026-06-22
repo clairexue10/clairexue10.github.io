@@ -9,29 +9,29 @@ const COURSES = [
 
 export default function Education() {
   return (
-    <section id="education" className="py-24 border-t border-slate-200">
+    <section id="education" className="py-24 border-t border-slate-200 dark:border-slate-800">
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className="font-display text-4xl md:text-5xl text-slate-900 font-semibold mb-16">
+        <h2 className="font-display text-4xl md:text-5xl text-slate-900 dark:text-slate-100 font-semibold mb-16">
           Education
         </h2>
 
         <div className="flex flex-col md:flex-row gap-12">
           <div className="md:w-48 shrink-0">
-            <p className="text-sm text-slate-500 font-sans">Class of 2026</p>
+            <p className="text-sm text-slate-500 dark:text-slate-400 font-sans">Class of 2026</p>
           </div>
 
           <div className="flex-1">
-            <h3 className="font-display text-2xl text-slate-900">Wellesley College</h3>
-            <p className="text-slate-600 font-sans mt-1 mb-8">B.A. Computer Science</p>
+            <h3 className="font-display text-2xl text-slate-900 dark:text-slate-100">Wellesley College</h3>
+            <p className="text-slate-600 dark:text-slate-400 font-sans mt-1 mb-8">B.A. Computer Science</p>
 
-            <p className="text-xs text-slate-400 font-sans uppercase tracking-widest mb-4">
+            <p className="text-xs text-slate-400 dark:text-slate-500 font-sans uppercase tracking-widest mb-4">
               Notable Coursework
             </p>
             <div className="flex flex-wrap gap-2">
               {COURSES.map((course) => (
                 <span
                   key={course}
-                  className="text-sm text-slate-700 bg-slate-100 px-3 py-1.5 rounded-full font-sans"
+                  className="text-sm text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-full font-sans"
                 >
                   {course}
                 </span>
