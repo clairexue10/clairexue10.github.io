@@ -13,7 +13,7 @@ export default function About() {
         <h2 className="font-display text-4xl md:text-5xl text-slate-900 dark:text-slate-100 font-semibold mb-12">
           About Me
         </h2>
-        <div className="max-w-2xl space-y-5">
+        <div className="max-w-2xl mx-auto space-y-5">
           {PARAGRAPHS.map((p, i) => (
             <p key={i} className="text-slate-700 dark:text-slate-300 font-sans leading-relaxed">
               {p}
