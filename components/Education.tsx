@@ -2,6 +2,7 @@ const COURSES = [
   'MIT 6.1800 Computer System Engineering',
   'CS 343 Distributed Systems',
   'CS 342 Computer Security',
+  'CS 240 Foundations of Computer Systems',
   'CS 251 Principles of Programming Languages',
   'CS 315 Data Science for the Web',
   'STAT 318 Regression Analysis',
