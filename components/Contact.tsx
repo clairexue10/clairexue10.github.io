@@ -1,5 +1,5 @@
 const LINKS = [
-  { label: 'Email', href: 'mailto:cx18189212596@gmail.com', display: 'cx18189212596@gmail.com' },
+  { label: 'Email', href: 'mailto:yx105@wellesley.edu', display: 'yx105@wellesley.edu' },
   { label: 'GitHub', href: 'https://github.com/clairexue10', display: 'github.com/clairexue10' },
   {
     label: 'LinkedIn',

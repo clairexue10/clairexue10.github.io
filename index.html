@@ -1,51 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Claire Xue</title>
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 </head>
-
 <body>
-  <header class="nav">
-    <div class="nav-left">
-      <a href="/index.html">Home</a>
-      <a href="/projects.html">Projects</a>
-      <a href="/resume.pdf">Resume</a>
-      <a href="/about.html">About</a>
-    </div>
-    <div class="nav-right">
-      <a href="https://github.com/clairexue10" target="_blank" rel="noreferrer">GitHub</a>
-      <a href="https://www.linkedin.com/in/yuhe-claire-xue-8605a4227" target="_blank" rel="noreferrer">LinkedIn</a>
-    </div>
-  </header>
-
-  <main class="container">
+  <main>
     <section class="hero">
-      <div class="hero-text">
-        <h1>Hello 👋</h1>
-        <p>
-          I am <strong>Yuhe (Claire) Xue</strong>, a Computer Science student at Wellesley College.
-        </p>
-        <p class="emphasis">
-          My interests focus on systems, programming languages, and the intersection of data science and society.
-        </p>
-        <a class="button" href="/about.html">Read more →</a>
-      </div>
-
-      <div class="hero-image">
-        <img src="./profile4.jpg" alt="Claire Xue portrait">
-      </div>
+      <h1>Claire Xue</h1>
+      <p class="tagline">CS student · builder · curious person</p>
+      <nav>
+        <a href="#about">about</a>
+        <a href="#projects">projects</a>
+        <a href="mailto:cx18189212596@gmail.com">contact</a>
+      </nav>
     </section>
 
+    <section id="about">
+      <h2>about</h2>
+      <p>
+        Hi! I'm Claire, a computer science student interested in systems,
+        programming languages, and building things that matter.
+        I like working close to the metal and thinking carefully about how
+        software is designed.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>projects</h2>
+      <ul class="project-list">
+        <li>
+          <span class="project-name">miniRaft</span>
+          <span class="project-desc">distributed consensus implementation in Rust</span>
+        </li>
+        <li>
+          <span class="project-name">miniJava</span>
+          <span class="project-desc">compiler for a subset of Java</span>
+        </li>
+        <li>
+          <span class="project-name">miniCaml</span>
+          <span class="project-desc">functional language interpreter</span>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      <a href="https://github.com/clairexue10" target="_blank">github</a>
+    </footer>
   </main>
 </body>
 </html>
-
