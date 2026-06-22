@@ -20,7 +20,7 @@ export default function Nav() {
           href="/"
           className="font-display text-xl font-semibold text-slate-900 dark:text-slate-100 shrink-0 hover:text-slate-600 dark:hover:text-slate-400 transition-colors"
         >
-          Claire Xue
+          Yuhe Xue
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">
