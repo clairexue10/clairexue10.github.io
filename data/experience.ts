@@ -6,17 +6,14 @@ export interface Experience {
   bullets: string[]
 }
 
-// Fill in your actual work experience, internships, and research roles here.
 export const experiences: Experience[] = [
-  // Example entry — replace or add your own:
-  // {
-  //   role: 'Software Engineering Intern',
-  //   company: 'Company Name',
-  //   location: 'City, State',
-  //   period: 'May 2025 – Aug 2025',
-  //   bullets: [
-  //     'Built X using Y, resulting in Z.',
-  //     'Collaborated with a team of N engineers on ...',
-  //   ],
-  // },
+  {
+    role: 'Research Intern',
+    company: 'Programming Languages and Verification Group, MIT Computer Science & Artificial Intelligence Laboratory',
+    location: 'Cambridge, MA',
+    period: 'June 2026 – Present',
+    bullets: [
+      'Extending A Tensor Language (ATL) framework towards formally verifying Transformer\'s FlashAttention algorithm.',
+    ],
+  },
 ]
