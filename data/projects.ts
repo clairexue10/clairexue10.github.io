@@ -37,7 +37,7 @@ export const projects: Project[] = [
   {
     slug: 'prog-lang',
     title: 'MiniJava Compiler & Bytecode VM',
-    course: 'CS 251 Principles of Programming Languages',
+    course: 'Principles of Programming Languages',
     year: 'Fall 2025',
     cardDescription:
       'A statically-typed object-oriented language compiler and bytecode virtual machine for a subset of Java, implemented in Rust.',
