@@ -13,7 +13,7 @@ export default function Hero() {
               Yuhe (Claire) Xue
             </h1>
             <p className="text-xl text-slate-600 dark:text-slate-400 font-sans mb-10 leading-relaxed">
-              CS student at Wellesley · systems, languages, data
+              CS student at Wellesley · systems, AI, languages, data
             </p>
             <div className="flex flex-wrap gap-3">
               <a
