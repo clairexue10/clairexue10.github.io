@@ -48,14 +48,18 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         {!project.subtitle && <div className="mb-10" />}
 
         <div className="aspect-video overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800 mb-12">
-          <Image
-            src={project.coverImage}
-            alt={project.title}
-            width={800}
-            height={450}
-            className="w-full h-full object-cover"
-            priority
-          />
+          {project.coverImage ? (
+            <Image
+              src={project.coverImage!}
+              alt={project.title}
+              width={800}
+              height={450}
+              className="w-full h-full object-cover"
+              priority
+            />
+          ) : (
+            <div className="w-full h-full bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-800" />
+          )}
         </div>
 
         {project.links && project.links.length > 0 && (

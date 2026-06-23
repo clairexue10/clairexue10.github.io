@@ -10,7 +10,7 @@ export interface Project {
   course: string
   year: string
   cardDescription: string
-  coverImage: string
+  coverImage?: string
   paragraphs?: string[]
   links?: ProjectLink[]
   codePrivate?: boolean
@@ -36,19 +36,33 @@ export const projects: Project[] = [
   },
   {
     slug: 'prog-lang',
-    title: 'MiniJava: Compilation and Interpretation',
+    title: 'MiniJava Compiler & Bytecode VM',
     course: 'CS 251 Principles of Programming Languages',
     year: 'Fall 2025',
     cardDescription:
-      'Implements a MiniJava compiler and interpreter in OCaml, modeling object-oriented semantics including inheritance, dynamic dispatch, and static type checking.',
+      'A statically-typed object-oriented language compiler and bytecode virtual machine for a subset of Java, implemented in Rust.',
     coverImage: '/images/prog-lang-cover.jpg',
-    codePrivate: true,
+    links: [{ label: 'GitHub', href: 'https://github.com/clairexue10/miniJava' }],
     paragraphs: [
-      'The following is a brief description of the final project for CS 251 Principles of Programming Languages that I took in Fall 2025.',
-      'The project explores the design of object-oriented language semantics by implementing a compact yet expressive subset of Java in OCaml. MiniJava loosely follows the structure of real Java and the JVM: programs are first compiled into a typed abstract syntax tree, and then evaluated by an interpreter operating on that compiled representation. By separating compilation from interpretation, the system mirrors how real runtimes enforce correctness through static analysis before any code is executed.',
-      'The first phase focuses on static type checking and compilation. Source programs are parsed into a high-level AST and compiled into a lower-level representation only if they satisfy MiniJava\'s typing rules. This includes validating class hierarchies, enforcing subtype relationships, checking method overriding constraints (including covariant return types), and ensuring expressions are used consistently with their expected types. The compiler detects errors such as undefined classes or fields, illegal uses of this, and type mismatches—ensuring that well-typed programs cannot encounter most runtime failures.',
-      'The second phase implements the interpreter, which evaluates compiled programs according to Java-style object semantics. Objects are instantiated with default field values, fields are resolved using static types, and method calls are dispatched dynamically based on the runtime class of the receiver. The interpreter maintains environments for variable bindings and object instances, supports inheritance and polymorphism, and precisely models the distinction between static and dynamic typing that underlies Java\'s behavior.',
-      "Due to course policy, the full implementation code cannot be shared publicly. However, this write-up documents the design decisions, system structure, and conceptual understanding developed throughout the project. I'm always happy to discuss the architecture, tradeoffs, and lessons learned.",
+      'MiniJava is a statically-typed object-oriented language compiler and bytecode virtual machine, implemented in Rust. It covers the full pipeline: recursive-descent parsing, static type checking with nominal subtyping, vtable-based virtual dispatch, and execution on a custom stack-machine VM.',
+      'The pipeline proceeds in several stages. Source code is parsed into a source AST, validated for duplicate names and inheritance cycles, then compiled by the type checker into a typed core IR. The type checker infers types, enforces subtype relationships, constructs vtables, and ensures all expressions are used consistently. Only well-typed programs proceed to the next stage.',
+      'The bytecode compiler lowers the typed IR into a flat sequence of stack-based instructions, which are then executed by a stack-machine VM with an operand stack and call frame stack. The VM supports the full language including virtual dispatch, field access, null-pointer exceptions, and method calls with single arguments.',
+      'MiniJava supports classes with single inheritance, access modifiers (public/private/protected), covariant return types in method overrides, field shadowing, this and super references, and null values. The implementation includes 34 tests covering arithmetic, inheritance, virtual dispatch, object aliasing, access violation enforcement, and all static and runtime error cases.',
+    ],
+  },
+  {
+    slug: 'mini-raft',
+    title: 'miniRaft: Distributed Consensus in Go',
+    course: 'CS 343 Distributed Systems',
+    year: 'Spring 2026',
+    cardDescription:
+      'Implements the Raft consensus algorithm in Go, covering leader election, log replication, heartbeat, and simulated fault tolerance.',
+    links: [{ label: 'GitHub', href: 'https://github.com/clairexue10/miniRaft' }],
+    paragraphs: [
+      'miniRaft is an implementation of the Raft Distributed Consensus Algorithm in Go, built as a class project for CS 343: Distributed Systems at Wellesley College.',
+      'The implementation covers the core Raft protocol: leader election with randomized election timeouts, log replication from leader to followers, commit index advancement once a majority acknowledges an entry, a heartbeat mechanism to suppress spurious elections, and simulated node failure and recovery.',
+      'Key components include RequestVote and AppendEntry RPC handlers, a LeaderElection driver that manages the candidate vote-gathering process, a Heartbeat routine that sends periodic AppendEntry RPCs to maintain leadership, and a replicateToFollowers function with retry/backoff on failure. An applyEntries background goroutine applies committed entries to the state machine, and simulateFailure randomly takes nodes offline and brings them back to test fault tolerance.',
+      'The cluster is configured via a port configuration file and can be run with any number of nodes, each started as a separate process. The implementation demonstrates core distributed systems concepts including split-vote handling, log consistency guarantees, and safe leader transitions.',
     ],
   },
   {

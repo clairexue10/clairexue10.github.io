@@ -18,13 +18,17 @@ export default function Projects() {
           {projects.map((project) => (
             <Link key={project.slug} href={`/projects/${project.slug}`} className="group block">
               <div className="aspect-video overflow-hidden rounded-lg bg-slate-100 dark:bg-slate-800 mb-4">
-                <Image
-                  src={project.coverImage}
-                  alt={project.title}
-                  width={400}
-                  height={225}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+                {project.coverImage ? (
+                  <Image
+                    src={project.coverImage!}
+                    alt={project.title}
+                    width={400}
+                    height={225}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-800" />
+                )}
               </div>
               <div>
                 <span className="text-xs text-slate-400 dark:text-slate-500 font-sans uppercase tracking-wide">
