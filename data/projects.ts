@@ -56,7 +56,7 @@ export const projects: Project[] = [
     course: 'CS 343 Distributed Systems',
     year: 'Spring 2026',
     cardDescription:
-      'Implements the Raft consensus algorithm in Go, covering leader election, log replication, heartbeat, and simulated fault tolerance.',
+      'Implemented the Raft consensus algorithm in Go, covering leader election, log replication, heartbeat, and simulated fault tolerance.',
     links: [{ label: 'GitHub', href: 'https://github.com/clairexue10/miniRaft' }],
     paragraphs: [
       'miniRaft is an implementation of the Raft Distributed Consensus Algorithm in Go, built as a class project for CS 343: Distributed Systems at Wellesley College.',
