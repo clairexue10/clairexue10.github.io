@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Typewriter from './Typewriter'
 
 export default function Hero() {
   return (
@@ -6,14 +7,14 @@ export default function Hero() {
       <div className="max-w-5xl mx-auto px-6">
         <div className="flex flex-col-reverse md:flex-row items-center md:items-start gap-12">
           <div className="flex-1">
-            <p className="text-slate-500 dark:text-slate-400 font-sans mb-3 text-sm tracking-wide uppercase">
-              Hi, I&apos;m
+            <p className="text-slate-500 dark:text-slate-400 font-sans mb-3 text-base md:text-lg tracking-wide uppercase">
+              <Typewriter text="Hi, I'm" />
             </p>
             <h1 className="font-display text-6xl md:text-7xl text-slate-900 dark:text-slate-100 font-semibold leading-tight mb-5">
               Yuhe (Claire) Xue
             </h1>
             <p className="text-xl text-slate-600 dark:text-slate-400 font-sans mb-10 leading-relaxed">
-              CS student at Wellesley · systems, AI, languages, data
+              CS @Wellesley, interested in Programming Languages, Verifications, and AI
             </p>
             <div className="flex flex-wrap gap-3">
               <a
