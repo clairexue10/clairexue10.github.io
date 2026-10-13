@@ -1,6 +1,10 @@
 import type { Metadata } from 'next'
 import { Crimson_Pro, Inter } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
+
+// GoatCounter site code — stats at https://<code>.goatcounter.com
+const GOATCOUNTER_CODE = 'clairexue'
 
 const crimsonPro = Crimson_Pro({
   subsets: ['latin'],
@@ -31,7 +35,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Prevent flash of wrong theme on load */}
         <script dangerouslySetInnerHTML={{ __html: `(function(){var s=localStorage.getItem('theme'),p=window.matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(s===null&&p))document.documentElement.classList.add('dark');})();` }} />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Script
+          data-goatcounter={`https://${GOATCOUNTER_CODE}.goatcounter.com/count`}
+          src="https://gc.zgo.at/count.js"
+          strategy="afterInteractive"
+        />
+      </body>
     </html>
   )
 }
