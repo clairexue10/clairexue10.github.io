@@ -57,12 +57,13 @@ export const projects: Project[] = [
     year: 'Spring 2026',
     cardDescription:
       'Implemented the Raft consensus algorithm in Go, covering leader election, log replication, heartbeat, and simulated fault tolerance.',
-    links: [{ label: 'GitHub', href: 'https://github.com/clairexue10/miniRaft' }],
+    codePrivate: true,
     paragraphs: [
       'miniRaft is an implementation of the Raft Distributed Consensus Algorithm in Go, built as a class project for CS 343: Distributed Systems at Wellesley College.',
       'The implementation covers the core Raft protocol: leader election with randomized election timeouts, log replication from leader to followers, commit index advancement once a majority acknowledges an entry, a heartbeat mechanism to suppress spurious elections, and simulated node failure and recovery.',
       'Key components include RequestVote and AppendEntry RPC handlers, a LeaderElection driver that manages the candidate vote-gathering process, a Heartbeat routine that sends periodic AppendEntry RPCs to maintain leadership, and a replicateToFollowers function with retry/backoff on failure. An applyEntries background goroutine applies committed entries to the state machine, and simulateFailure randomly takes nodes offline and brings them back to test fault tolerance.',
       'The cluster is configured via a port configuration file and can be run with any number of nodes, each started as a separate process. The implementation demonstrates core distributed systems concepts including split-vote handling, log consistency guarantees, and safe leader transitions.',
+      "Due to course policy, the full implementation code cannot be shared publicly. However, this write-up documents the design decisions, system structure, and conceptual understanding developed throughout the project. I'm always happy to discuss the architecture, tradeoffs, and lessons learned in more detail.",
     ],
   },
   {
